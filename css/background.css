@@ -1,0 +1,15 @@
+/* line 5, background.less */
+.bg-white {
+  background-color: #ffffff;
+}
+/* line 10, background.less */
+body:before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  z-index: -1;
+  background-color: #eeeeee;
+}
