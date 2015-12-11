@@ -1,39 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="lukeAdmin">
 <head>
     <meta charset="UTF-8">
     <title> logo page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--  基础的样式 -->
+    <link rel="stylesheet" href="other/fontawesome/css/font-awesome.css">
     <link rel="stylesheet" href="other/bootstrap-3.3.5/dist/css/bootstrap.css">
     <link rel="stylesheet" href="other/animate/animate.css">
-
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300" rel="stylesheet" type="text/css">
 
 
     <!--  luke  -->
-    <link rel="stylesheet" href="css/luke.css">
-
-
+    <link rel="stylesheet" href="css/lukeAdmin.css">
 </head>
 <body>
-    <div class="login-container animated fadeInDown">
-        <div class="loginbox bg-white">
-            <div class="loginbox-title">职工e家商城登录中心</div>
-            <div class="loginbox-des">
-                <div class="des-line"></div>
+    <div class="login-container animated fadeInDown" ng-controller="adminLogin">
+        <form novalidate name="login">
+            <div class="loginbox bg-white">
+                <div class="loginbox-title">职工e家商城登录中心</div>
+                <div class="loginbox-des">
+                    <div class="des-line"></div>
+                </div>
+                <div class="loginbox-textbox">
+                    <div ng-class="{'has-feedback':login.userName.$dirty,
+                         'has-success':login.userName.$dirty && login.userName.$valid,
+                         'has-error':login.userName.$dirty && login.userName.$invalid,}" class="has-feedfront">
+                        <span class="icon-user form-control-feedfront"></span>
+                        <input type="text" ng-model="user.userName" name="userName" class="form-control" placeholder="请输入你的用户名" required>
+                        <span ng-if="login.userName.$dirty"
+                              ng-class="{'icon-ok':login.userName.$dirty && login.userName.$valid,
+                                'icon-remove':login.userName.$dirty && login.userName.$invalid,
+                                }" class="form-control-feedback"></span>
+                        <span ng-if="login.userName.$dirty && login.userName.$invalid" class="form-control-msg text-right">用户名不能为空</span>
+                    </div>
+
+                </div>
+                <div class="loginbox-textbox">
+                    <div class="has-feedfront"
+                         ng-class="{
+                            'has-feedback':login.password.$dirty,
+                            'has-error':login.password.$dirty && login.password.$invalid,
+                            'has-success':login.password.$dirty && login.password.$valid,
+                         }">
+                        <span class="icon-lock form-control-feedfront"></span>
+                        <input type="password" ng-model="user.password" class="form-control" placeholder="请输入你的密码" name="password" required>
+                        <span class="form-control-feedback" ng-if="login.password.$dirty"
+                                ng-class="{
+                                'icon-remove':login.password.$dirty && login.password.$invalid,
+                                'icon-ok':login.password.$dirty && login.password.$valid,
+                                }"></span>
+                        <span ng-if="login.password.$dirty && login.password.$invalid" class="form-control-msg text-right">密码不能为空</span>
+                    </div>
+                </div>
+                <div class="loginbox-submit">
+                    <input type="button" ng-click="commitUser(user)" class="btn btn-primary btn-block" value="登陆" ng-disabled="login.$invalid">
+                </div>
             </div>
-            <div class="loginbox-textbox">
-                <input type="text" class="form-control" placeholder="请输入你的用户名" name="count">
-            </div>
-            <div class="loginbox-textbox">
-                <input type="password" class="form-control" placeholder="请输入你的密码" name="password">
-            </div>
-            <div class="loginbox-submit">
-                <input type="button" class="btn btn-primary btn-block" value="登陆">
-            </div>
-        </div>
+            <div class="logobox bg-white"></div>
+        </form>
     </div>
+
+
+    <!-- 引进anglarjs模块 -->
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>

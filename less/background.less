@@ -3,11 +3,25 @@
 
 // 设置背景颜色
 .bg-white{
-    background-color: @color-white;
+    background-color: @bg-white !important;
 }
+.bg-blue {
+  background-color: @bg-blue !important;
+}
+.bg-darkorange{
+  background-color: @bg-darkorange !important;
+}
+.bg-warning{
+  background-color: @color-warning !important;
+}
+.bg-palegreen{
+  background-color: @color-palegreen !important;
+}
+
 
 // 为整个框架设置背景色
 body:before{
+  content: "";
   position: fixed;
   top: 0;
   left: 0;

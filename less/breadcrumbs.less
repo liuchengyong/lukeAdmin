@@ -1,0 +1,43 @@
+@import "variable";
+.page-breadcrumbs{
+  position: relative;
+  background-color: @breadcrumbs-back;
+  min-height: 40px;
+  line-height: 39px;
+  padding: 0;
+  display: block;
+  z-index: 1;
+  box-shadow: 0 2px 4px 0 @breadcrumbs-shadow;
+}
+
+.breadcrumb{
+  background-color: transparent;
+  display: inline-block;
+  line-height: 24px;
+  margin: 0 22px 0 12px;
+  padding: 0;
+  font-size: 13px;
+  color:@breadcrumbs-text;
+  border-radius: 0;
+  &>li{
+    color: @breadcrumbs-text-li;
+    text-shadow: none;
+    &+li:before{
+      color: @breadcrumbs-text-li-before;
+    }
+    &>i{
+      margin-left: 4px;
+      margin-right: 2px;
+      font-size: 20px;
+      position: relative;
+      top: 2px;
+    }
+    &:first-child>a{
+      padding-left: 4px;
+    }
+    &>a{
+      display: inline-block;
+      color: @breadcrumbs-text-li-a;
+    }
+  }
+}

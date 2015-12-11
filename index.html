@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lukeAdmin">
+<head>
+    <meta charset="UTF-8">
+    <title> logo page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--  基础的样式 -->
+    <link rel="stylesheet" href="other/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="other/bootstrap-3.3.5/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="other/animate/animate.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300" rel="stylesheet" type="text/css">
+
+
+    <!--  luke  -->
+    <link rel="stylesheet" href="css/lukeAdmin.css">
+</head>
+<body>
+    <!--   loading -->
+    <div class="load-container load-inactive">
+        <div class="loader">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--  头部导航  -->
+    <div class="navbar"></div>
+
+    <!-- MainContainer-->
+    <div class="main-container container-fluid">
+        <div class="page-container">
+            <!-- page  sidebar -->
+            <div class="page-sidebar">
+                <!--  side 头部搜索  -->
+                <div class="sidebar-header-wrapper">
+                    <input type="text" class="side-search">
+                    <i class="search-icon icon-search"></i>
+                </div>
+
+                <!--  side 菜单项  -->
+                <ul class="nav sidebar-menu">
+                    <!-- 主页  -->
+                    <li class="active">
+                        <a href="index.html">
+                            <i class="menu-icon icon-home"></i>
+                            <span class="menu-text"> LukeAdmin </span>
+                        </a>
+
+                    </li>
+                    <!-- element  -->
+                    <li>
+                        <a href="#">
+                            <i class="menu-icon icon-home"></i>
+                            <span class="menu-text"> element </span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="login.html">
+                                    <span class="menu-text"> Basic Element </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="menu-text"> icons </span>
+                                    <i class="menu-expand"></i>
+                                </a>
+                                <ul class="submenu">
+                                    <li>
+                                        <a href="#">
+                                            <i class="menu-icon icon-rocket"></i>
+                                            <span class="menu-text"> Font Awesome </span>
+                                            <i class="menu-expand"></i>
+                                        </a>
+                                        <ul class="submenu">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="menu-icon glyphicon glyphicon-stats"></i>
+                                                    <span class="menu-text"> Glyph Icons </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="menu-icon glyphicon glyphicon-stats"></i>
+                                                    <span class="menu-text"> Typicons </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="menu-icon glyphicon glyphicon-stats"></i>
+                                            <span class="menu-text"> Glyph Icons </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="menu-icon glyphicon glyphicon-stats"></i>
+                                            <span class="menu-text"> Typicons </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="menu-icon glyphicon glyphicon-stats"></i>
+                                            <span class="menu-text"> Weather Icons </span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                            <li>
+                                <a href="login.html">
+                                    <span class="menu-text"> Login </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- 网页常用的页面 -->
+                    <li>
+                        <a href="#">
+                            <i class="menu-icon icon-paper-clip"></i>
+                            <span class="menu-text"> more page </span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="login.html">
+                                    <span class="menu-text">登陆页面</span>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- 数据表格  -->
+                    <li>
+                        <a href="#">
+                            <i class="menu-icon icon-table"></i>
+                            <span class="menu-text"> Tables </span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="table-simple.html">
+                                    <i class="menu-icon icon-table"></i>
+                                    <span class="menu-text"> Simple & Resposive </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- page content  -->
+            <div class="page-content">
+                <!-- breadcrumbs-->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <i class="icon-home"></i>
+                            <a href="#">home</a>
+                        </li>
+                        <li>
+                            <a href="#">Table</a>
+                        </li>
+                        <li>
+                            Simple and Responsive
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- page header -->
+                <div class="page-header">
+                    <div class="header-title">
+                        <h1>
+                            Table
+                            <small>
+                                <i class="icon-angle-right"></i>
+                                simple and resposive tables
+                            </small>
+                        </h1>
+                    </div>
+                    <div class="header-buttons"></div>
+                </div>
+
+                <!-- pagebody -->
+                <div class="page-body">
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 引进anglarjs模块 -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/lukeAdmin.js"></script>
+</body>
+</html>

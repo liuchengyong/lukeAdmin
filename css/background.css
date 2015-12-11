@@ -2,6 +2,7 @@
 .bg-white {
   background-color: #ffffff;
 }
+
 /* line 10, background.less */
 body:before {
   position: fixed;
@@ -13,3 +14,5 @@ body:before {
   z-index: -1;
   background-color: #eeeeee;
 }
+
+

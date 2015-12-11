@@ -1,0 +1,52 @@
+@import "variable";
+.has-error{
+  .form-control-feedfront{
+    color:@color-form-error;
+  }
+  .form-control-msg{
+    color:@color-form-error;
+  }
+
+}
+
+.has-success{
+  .form-control-feedfront{
+    color: @color-form-success;
+  }
+  .form-control-msg{
+    color: @color-form-success;
+  }
+}
+.has-warning{
+  .form-control-feedfront{
+    color:@color-form-warning;
+  }
+  .form-control-msg{
+    color:@color-form-warning;
+  }
+}
+
+.has-feedfront{
+  position: relative;
+  .form-control{
+      padding-left: 42.5px;
+  }
+}
+
+.form-control-msg{
+  display: block;
+  height: 25px;
+  line-height: 25px;
+}
+.form-control-feedfront {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  pointer-events: none;
+}
